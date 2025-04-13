@@ -1,0 +1,38 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+html , body{
+    height: 100%;
+    width: 100%;
+}
+
+/* ---------------important--------------- */
+body{
+    overflow-x: hidden;
+}
+
+#page1{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+}
+#page2{
+    height: 100%;
+    width: 100%;
+    /* background-color: black; */
+    /* color: white; */
+    /* border: solid black 18px; */
+    background-color: rgb(65, 221, 253);
+    white-space: nowrap;
+}
+#page3{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+}
+
+#page2 h1{
+    font-size: 80vh;
+    text-transform: uppercase;
+}

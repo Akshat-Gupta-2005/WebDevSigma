@@ -1,0 +1,64 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+html , body{
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+#space{
+    height: 100%;
+    width: 100%;
+    /* background-color: seagreen; */
+    background-image: url(pexels-pixabay-158827.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+#nav{
+    height: 10%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    color: white;
+    backdrop-filter: blur(1px);
+    border-radius: 20px;
+}
+
+#nav i{
+    font-size: larger;
+}
+
+#full{
+    position: fixed;
+    height: 100%;
+    width: 40%;
+    background-color: rgba(255, 255, 255, 0.123);
+    top: 0px;
+    /* right: 0px; */
+    right: -40%;
+    padding: 8%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: larger;
+    backdrop-filter: blur(10px);
+    border-radius: 10px 0px 0px 10px;
+}
+
+#full i{
+    position: fixed;
+    top: 5%;
+    right: 5%;
+    /* border: 2px solid white; */
+    background-color: white;
+    border-radius: 50%;
+}

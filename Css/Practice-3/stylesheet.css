@@ -1,0 +1,15 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+
+header,div,footer{
+    border: 1px solid;
+    margin: 5px;
+}
+
+div{
+    height: 50px;
+    box-sizing: border-box;
+}

@@ -1,0 +1,14 @@
+table{
+    margin:0 auto;
+    border-collapse: collapse;
+    border-color: rgb(144, 144, 246);
+}
+body{
+    font-size: small;
+}
+.grey{
+ background-color: rgb(218, 216, 216);
+}
+.red{
+ background-color: rgb(238, 100, 128);
+}

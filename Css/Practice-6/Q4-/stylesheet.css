@@ -1,0 +1,58 @@
+.navbar{
+    display: flex;
+    height: 50px;
+    background-color: rgb(193, 193, 241);
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.nav{
+    display: flex;
+    height: 50px;
+    background-color: rgb(193, 193, 241);
+    align-items: center;
+    justify-content: space-between;
+}
+
+.but{
+    border: 2px solid grey;
+    padding: 6px 20px;
+}
+
+.icon{
+    border: 2px solid grey;
+    padding: 20px 20px;
+}
+
+.img{
+    background-image: url(pexels-eberhardgross-443446.jpg) ;
+    height: 30vh;
+    background-size: cover;
+
+}
+
+.con{
+    background-color: rgb(240, 184, 184);
+    display: flex;
+    justify-content: space-around;
+    padding: 50px;
+}
+
+.b1{
+    height: 300px;
+    width: 300px;
+    background-color: rgb(169, 215, 169);
+}
+
+.b2{
+    height: 300px;
+    width: 300px;
+    background-color: rgb(241, 241, 195);
+}
+
+.b3{
+    height: 300px;
+    width: 300px;
+    background-color: rgb(195, 241, 236);
+}

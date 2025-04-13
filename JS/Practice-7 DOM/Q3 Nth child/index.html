@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            height: 250px;
+            width: 250px;
+            border: solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">box</div>
+    <div class="box">box</div>
+    <div class="box">box</div>
+</body>
+<script>
+    document.body.querySelectorAll(":nth-child(odd)").forEach(e =>{e.style.backgroundColor = "green"})
+</script>
+</html>

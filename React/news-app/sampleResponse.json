@@ -1,0 +1,97 @@
+{
+    "status": "ok",
+    "totalResults": 7,
+    "articles": [
+        {
+            "source": {
+                "id": "news24",
+                "name": "News24"
+            },
+            "author": "Khaya Sithole",
+            "title": "Khaya Sithole | BELA Act: Once again, SA's courts may have to do what politicians can't",
+            "description": "As the threat of litigation looms large over a particularly contentious piece of legislation, the price of concessionary politics becomes clear: the judiciary may once again be forced to help the political process find its way, writes Khaya Sithole.",
+            "url": "https://www.news24.com/fin24/opinion/khaya-sithole-bela-act-once-again-sas-courts-may-have-to-do-what-politicians-cant-20250117",
+            "urlToImage": "https://cdn.24.co.za/files/Cms/General/d/12604/7472b9209281469890920bc03b2b7c00.jpg",
+            "publishedAt": "2025-01-17T07:00:50",
+            "content": "As the threat of litigation looms large over a particularly contentious piece of legislation, the price of concessionary politics becomes clear: the judiciary may once again be forced to help the pol… [+49 chars]"
+        },
+        {
+            "source": {
+                "id": "al-jazeera-english",
+                "name": "Al Jazeera English"
+            },
+            "author": "Abid Hussain",
+            "title": "Pakistan pulls closer to post-Hasina Bangladesh amid shared India concerns",
+            "description": "Pakistan and Bangladesh have edged closer as politics in both countries ride on a general anti-India sentiment.",
+            "url": "https://www.aljazeera.com/news/2025/1/17/pakistan-pulls-closer-to-post-hasina-bangladesh-amid-shared-india-concerns",
+            "urlToImage": "https://www.aljazeera.com/wp-content/uploads/2025/01/BOYS-1737036134.jpg?resize=1920%2C1080&quality=80",
+            "publishedAt": "2025-01-17T03:40:19Z",
+            "content": "Islamabad, Pakistan The flags of their nations planted on a table between them, Pakistans army chief, General Asim Munir, sat with Lieutenant General SM Kamrul Hassan, an officer in the Bangladesh mi… [+8391 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "[Removed]"
+            },
+            "author": null,
+            "title": "[Removed]",
+            "description": "[Removed]",
+            "url": "https://removed.com",
+            "urlToImage": null,
+            "publishedAt": "2025-01-17T03:07:47Z",
+            "content": "[Removed]"
+        },
+        {
+            "source": {
+                "id": "nbc-news",
+                "name": "NBC News"
+            },
+            "author": "Megan Lebowitz",
+            "title": "Biden says 'red states really screwed up' in handling their economies during Covid years",
+            "description": "The president also said in his interview with MSNBC that he \"almost spent too much time on the policy and not enough time on the politics\" of programs he signed into law.",
+            "url": "https://www.nbcnews.com/politics/joe-biden/biden-says-red-states-really-screwed-handling-economies-covid-years-rcna188080",
+            "urlToImage": "https://media-cldnry.s-nbcnews.com/image/upload/t_nbcnews-fp-1200-630,f_auto,q_auto:best/rockcms/2025-01/250116-joe-biden-ac-957p-9a8dcf.jpg",
+            "publishedAt": "2025-01-17T03:00:00Z",
+            "content": "WASHINGTON President Joe Biden on Thursday criticized Republican-led states for how they handled their economies in recent years and acknowledged that Democrats could have done a better job selling t… [+2575 chars]"
+        },
+        {
+            "source": {
+                "id": "cnn",
+                "name": "CNN"
+            },
+            "author": "",
+            "title": "Kara Swisher says she agrees with Steve Bannon about Elon Musk | CNN Politics",
+            "description": "CNN contributor and podcast host Kara Swisher explains why she agrees with former Trump strategist Steve Bannon about the level of power Elon Musk will have in President-elect Donald Trump’s White House.",
+            "url": "https://www.cnn.com/2025/01/16/politics/video/swisher-bannon-musk-trump-digvid",
+            "urlToImage": "https://media.cnn.com/api/v1/images/stellar/prod/180830113636-elon-musk-steve-bannon.jpg?q=w_4000,h_2250,x_0,y_0,c_fill/w_800",
+            "publishedAt": "2025-01-16T18:09:07.511Z",
+            "content": "CNN contributor and podcast host Kara Swisher explains why she agrees with former Trump strategist Steve Bannon about the level of power Elon Musk will have in President-elect Donald Trump's White Ho… [+3 chars]"
+        },
+        {
+            "source": {
+                "id": "the-american-conservative",
+                "name": "The American Conservative"
+            },
+            "author": null,
+            "title": "Politics Archives - The American Conservative",
+            "description": null,
+            "url": "https://www.theamericanconservative.com/category/politics/",
+            "urlToImage": null,
+            "publishedAt": "2022-07-07T21:37:27.3936289Z",
+            "content": null
+        },
+        {
+            "source": {
+                "id": "the-jerusalem-post",
+                "name": "The Jerusalem Post"
+            },
+            "author": null,
+            "title": "Congresswoman Nita Lowey: I am proud to stand with Israel",
+            "description": "Gantz: Security of Israel is above politics; PA: This is a crime.",
+            "url": "https://www.jpost.com/Arab-Israeli-Conflict/Gantz-Security-of-Israel-is-above-politics-Palestinians-This-is-a-crime-607595",
+            "urlToImage": "https://images.jpost.com/image/upload/f_auto,fl_lossy/t_Article2016_ControlFaceDetect/448812",
+            "publishedAt": "2019-11-13T04:41:00Z",
+            "content": "US Ambassador David M. Friedman said the US stands “with our friend and ally Israel at this critical moment” on social media on Tuesday after roughly 170 rockets were fired on Israel from the Gaza St… [+6160 chars]"
+        }
+    ]
+}

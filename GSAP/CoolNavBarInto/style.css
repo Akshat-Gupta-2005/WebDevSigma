@@ -1,0 +1,27 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    color: white;
+    background-color: black;
+}
+
+#nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+#part2{
+    display: flex;
+    gap: 30px;
+}
+
+h1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    font-size: 80px;
+    white-space: nowrap;
+}

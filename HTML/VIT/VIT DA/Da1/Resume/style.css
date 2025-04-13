@@ -1,0 +1,60 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.resume-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    border: solid 2px rgb(184, 184, 184);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2em;
+    margin: 0;
+}
+
+header p {
+    font-size: 0.9em;
+    margin: 5px 0;
+}
+
+div {
+    margin-bottom: 20px;
+}
+
+div h2 {
+    border-bottom: 2px solid #007BFF;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+div ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+div .Project h3 {
+    margin: 0;
+    font-size: 1.1em;
+}
+
+div .Project p {
+    font-size: 0.9em;
+    margin: 5px 0 10px;
+}
+
+.Bold{
+    font-weight: bold;
+}

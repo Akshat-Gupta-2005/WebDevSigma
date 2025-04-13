@@ -1,0 +1,59 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.nav{
+    height: 10vh;
+    background-color: pink;
+    position: sticky;
+    top: 0px;
+}
+body{
+    height: 1200px;
+}
+.c{
+    margin: 3%;
+    background-color: green;
+    height: auto;
+    text-align: center;
+}
+
+.box{
+    height: 40vw;
+    width: 40vw;
+    display: inline-block;
+    margin:2vw;
+}
+
+.red{
+    background-color: red;
+
+}
+.blue{
+    background-color: blue;
+}
+
+.text{
+    border: solid;
+    font-size: 50px;
+    text-align: center;
+    border-radius: 20px;
+    margin: 20px;
+}
+
+.foot{
+    background-color: cyan;
+    height: 50px;
+    position:relative;
+    top: 600px;
+}
+
+.circle{
+    height: 50px;
+    width: 50px;
+    background-color: yellow;
+    border-radius: 25px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}

@@ -1,0 +1,12 @@
+*{
+    margin: 0;
+}
+p{
+    background-color: blue;
+    color: white;
+}
+
+div>p:nth-child(1){
+    background-color: yellow;
+    color: red;
+}

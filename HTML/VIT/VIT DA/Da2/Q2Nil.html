@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+</head>
+
+<body>
+
+    <h2>Registration Form</h2>
+    <form id="registrationForm">
+        <label>User ID:</label>
+        <input type="text" id="userId">
+        <p id="userIdError"></p>
+
+        <label>Password:</label>
+        <input type="password" id="password">
+        <p id="passwordError"></p>
+
+        <label>Name:</label>
+        <input type="text" id="name">
+        <p id="nameError"></p>
+
+        <label>Address:</label>
+        <input type="text" id="address">
+        <p>Optional.</p>
+
+        <label>Country:</label>
+        <select id="country">
+            <option value="">Select a country</option>
+            <option value="USA">USA</option>
+            <option value="India">India</option>
+            <option value="UK">UK</option>
+        </select>
+        <p id="countryError"></p>
+
+        <label>ZIP Code:</label>
+        <input type="text" id="zipCode">
+        <p id="zipError"></p>
+
+        <label>Email:</label>
+        <input type="email" id="email">
+        <p id="emailError"></p>
+
+        <label>Sex:</label>
+        <input type="radio" name="gender" value="Male"> Male
+        <input type="radio" name="gender" value="Female"> Female
+        <p id="genderError"></p>
+
+        <label>Language:</label>
+        <input type="checkbox" name="language" value="English"> English
+        <input type="checkbox" name="language" value="Non-English"> Non-English
+        <p id="languageError"></p>
+
+        <label>About:</label>
+        <textarea id="about"></textarea>
+        <p>Optional.</p>
+
+        <button type="button" onclick="submitForm()">Submit</button>
+    </form>
+
+    <h2>Submitted Data</h2>
+    <table id="resultTable">
+        <tr>
+            <th>User ID</th>
+            <th>Password</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Country</th>
+            <th>ZIP Code</th>
+            <th>Email</th>
+            <th>Sex</th>
+            <th>Language</th>
+            <th>About</th>
+        </tr>
+    </table>
+
+    <script>
+        function validateInput() {
+            let isValid = true;
+
+            let userId = document.getElementById("userId").value;
+            let password = document.getElementById("password").value;
+            let name = document.getElementById("name").value;
+            let country = document.getElementById("country").value;
+            let zipCode = document.getElementById("zipCode").value;
+            let email = document.getElementById("email").value;
+            let gender = document.querySelector('input[name="gender"]:checked');
+            let languages = document.querySelectorAll('input[name="language"]:checked');
+
+            function showError(id, message) {
+                let element = document.getElementById(id);
+                element.innerText = message;
+                element.style.color = "red"; // Set text color to red
+            }
+
+            function clearError(id) {
+                let element = document.getElementById(id);
+                element.innerText = "";
+            }
+
+            if (userId.length < 5 || userId.length > 12) {
+                showError("userIdError", "Required (5-12 characters).");
+                isValid = false;
+            } else {
+                clearError("userIdError");
+            }
+
+            if (password.length < 7 || password.length > 12) {
+                showError("passwordError", "Required (7-12 characters).");
+                isValid = false;
+            } else {
+                clearError("passwordError");
+            }
+
+            if (!/^[a-zA-Z]+$/.test(name)) {
+                showError("nameError", "Required (Alphabets only).");
+                isValid = false;
+            } else {
+                clearError("nameError");
+            }
+
+            if (country === "") {
+                showError("countryError", "Required. Must select a country.");
+                isValid = false;
+            } else {
+                clearError("countryError");
+            }
+
+            if (!/^\d+$/.test(zipCode)) {
+                showError("zipError", "Required (Numeric only).");
+                isValid = false;
+            } else {
+                clearError("zipError");
+            }
+
+            if (!/^\S+@\S+\.\S+$/.test(email)) {
+                showError("emailError", "Required (Valid email).");
+                isValid = false;
+            } else {
+                clearError("emailError");
+            }
+
+            if (!gender) {
+                showError("genderError", "Required.");
+                isValid = false;
+            } else {
+                clearError("genderError");
+            }
+
+            if (languages.length === 0) {
+                showError("languageError", "Required.");
+                isValid = false;
+            } else {
+                clearError("languageError");
+            }
+
+            return isValid;
+        }
+
+        function submitForm() {
+            if (!validateInput()) return;
+
+            let userId = document.getElementById("userId").value;
+            let password = document.getElementById("password").value;
+            let name = document.getElementById("name").value;
+            let address = document.getElementById("address").value || "N/A";
+            let country = document.getElementById("country").value;
+            let zipCode = document.getElementById("zipCode").value;
+            let email = document.getElementById("email").value;
+            let gender = document.querySelector('input[name="gender"]:checked').value;
+            let languages = Array.from(document.querySelectorAll('input[name="language"]:checked')).map(el => el.value).join(", ");
+            let about = document.getElementById("about").value || "N/A";
+
+            let table = document.getElementById("resultTable");
+            let newRow = table.insertRow(-1);
+            newRow.innerHTML = `<td>${userId}</td><td>${password}</td><td>${name}</td><td>${address}</td>
+                        <td>${country}</td><td>${zipCode}</td><td>${email}</td>
+                        <td>${gender}</td><td>${languages}</td><td>${about}</td>`;
+            alert("Form submitted successfully!");
+        }
+    </script>
+</body>
+
+</html>

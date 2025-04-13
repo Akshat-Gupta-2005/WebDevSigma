@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ration Card Updation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="navbar">
+        <div>Ration Card Updation</div>
+        <div>
+            <a href="#">Home</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>Update Your Ration Card</h1>
+
+        <form>
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" placeholder="Enter your full name">
+            </div>
+
+            <div class="form-group">
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob">
+            </div>
+
+            <div class="form-group">
+                <label for="ration-number">Ration Card Number:</label>
+                <input type="text" id="ration-number" placeholder="Enter your ration card number">
+            </div>
+
+            <div class="form-group">
+                <label for="address">Address:</label>
+                <input type="text" id="address" placeholder="Enter your current address">
+            </div>
+
+            <div class="form-group">
+                <label for="relation">Relation to Head of Family:</label>
+                <select id="relation">
+                    <option value="">Select</option>
+                    <option value="head">Head</option>
+                    <option value="spouse">Spouse</option>
+                    <option value="child">Child</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <div style="text-align: center;">
+                <button type="submit">Update Details</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>

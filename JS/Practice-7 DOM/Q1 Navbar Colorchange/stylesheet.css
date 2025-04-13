@@ -1,0 +1,16 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.nav{
+    padding: 5px;
+    background: darkblue;
+}
+
+.item{
+    display: inline-block;
+    background-color: rgb(185, 185, 249);
+    margin: 0px 50px;
+    padding: 0px 50px;
+}

@@ -1,0 +1,78 @@
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Number Analysis Form</title>
+    <style>
+        #outputBox{
+            width: 50vw;
+            /* height: 20vh; */
+        }
+    </style>
+    <script>
+        let pm = parseInt(prompt("1)Enter a number from prompt:")) || 0;
+
+        function isPrime(num) {
+            if (num < 2) return false;
+            for (let i = 2; i <= Math.sqrt(num); i++) {
+                if (num % i === 0) return false;
+            }
+            return true;
+        }
+
+        function isArmstrong(num) {
+            let sum = 0, temp = num, digits = num.toString().length;
+            while (temp > 0) {
+                sum += Math.pow(temp % 10, digits);
+                temp = Math.floor(temp / 10);
+            }
+            return sum === num;
+        }
+
+        function isRamanujan(num) {
+            let count = 0;
+            for (let a = 1; a * a * a < num; a++) {
+                let b = Math.round(Math.cbrt(num - a * a * a));
+                if (a * a * a + b * b * b === num && a !== b) count++;
+            }
+            return count >= 2;
+        }
+
+        function analyzeNumbers() {
+            let textBoxValue = parseInt(document.getElementById("textBox").value) || 0;
+            let dropDownValue = parseInt(document.getElementById("dropDown").value);
+            
+            let results = [pm,textBoxValue, dropDownValue].map(num => {
+                return `${num}: Prime - ${isPrime(num)}, Armstrong - ${isArmstrong(num)}, Ramanujan - ${isRamanujan(num)}`;
+            });
+
+            alert(results);
+            document.getElementById("outputBox").value = results;
+
+            setTimeout(() => {
+                document.writeln(results);
+            }, 2000);
+        }
+    </script>
+</head>
+<body>
+    <h2>Number Analysis Form</h2>
+    <form onsubmit="event.preventDefault(); analyzeNumbers();">
+        <label> 2)Enter a Number for textbox:</label>
+        <input type="number" id="textBox" required><br><br>
+        
+        <label>3)Select a Number from dropdown:</label>
+        <select id="dropDown">
+            <option value="10">10</option>
+            <option value="153">153</option>
+            <option value="1729">1729</option>
+            <option value="23">23</option>
+        </select><br><br>
+        
+        <input type="submit" value="Analyze Numbers">
+    </form>
+    <br>
+    <label>Output:</label>
+    <input type="text" id="outputBox" readonly>
+</body>
+</html>

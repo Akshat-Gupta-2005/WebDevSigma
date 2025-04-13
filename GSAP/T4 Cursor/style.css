@@ -1,0 +1,21 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+html , body{
+    height: 100%;
+    width: 100%;
+}
+
+#space{
+    background-color: black;
+    height: 100%;
+}
+
+#cursor{
+    height: 20px;
+    width: 20px;
+    background-color: yellow;
+    border-radius: 50%;
+    position: fixed;
+}

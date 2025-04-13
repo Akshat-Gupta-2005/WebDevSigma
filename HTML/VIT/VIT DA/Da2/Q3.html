@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form with Getter & Setter</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f4f4f4; padding: 20px; }
+        .container { max-width: 400px; background: white; padding: 20px; border-radius: 8px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); }
+        label { font-weight: bold; display: block; margin-top: 10px; }
+        input, select, textarea { width: 100%; padding: 8px; margin-top: 5px; border: 1px solid #ccc; border-radius: 5px; }
+        button { background-color: #28a745; color: white; padding: 10px; width: 100%; border: none; border-radius: 5px; cursor: pointer; }
+        button:disabled { background-color: #ccc; }
+        #userTable { width: 100%; margin-top: 20px; border-collapse: collapse; }
+        #userTable th, #userTable td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+        #userTable th { background-color: #f2f2f2; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Registration Form</h2>
+        <form id="registrationForm">
+            <label>User ID (5-12 chars)*</label>
+            <input type="text" id="userId" required>
+
+            <label>Password (7-12 chars)*</label>
+            <input type="password" id="password" required>
+
+            <label>Name (Alphabets only)*</label>
+            <input type="text" id="name" required>
+
+            <label>Address (Optional)</label>
+            <input type="text" id="address">
+
+            <label>Country*</label>
+            <select id="country" required>
+                <option value="">Select Country</option>
+                <option value="USA">USA</option>
+                <option value="UK">UK</option>
+                <option value="India">India</option>
+                <option value="Canada">Canada</option>
+            </select>
+
+            <label>ZIP Code (Numbers only)*</label>
+            <input type="text" id="zipCode" required>
+
+            <label>Email ID*</label>
+            <input type="email" id="email" required>
+
+            <label>Gender*</label>
+            <input type="radio" name="gender" value="Male"> Male
+            <input type="radio" name="gender" value="Female"> Female
+
+            <label>Language*</label>
+            <input type="checkbox" id="english" value="English"> English
+            <input type="checkbox" id="nonEnglish" value="Non-English"> Non-English
+
+            <label>About (Optional)</label>
+            <textarea id="about" rows="3"></textarea>
+
+            <button type="button" id="submitBtn">Register</button>
+        </form>
+    </div>
+
+    <h2>Entered User Details</h2>
+    <table id="userTable">
+        <thead>
+            <tr>
+                <th>User ID</th>
+                <th>Name</th>
+                <th>Address</th>
+                <th>Country</th>
+                <th>ZIP Code</th>
+                <th>Email</th>
+                <th>Gender</th>
+                <th>Language</th>
+                <th>About</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <script>
+        // GETTER FUNCTION
+        function getFormValues() {
+            return {
+                userId: document.getElementById("userId").value,
+                password: document.getElementById("password").value,
+                name: document.getElementById("name").value,
+                address: document.getElementById("address").value,
+                country: document.getElementById("country").value,
+                zipCode: document.getElementById("zipCode").value,
+                email: document.getElementById("email").value,
+                gender: document.querySelector('input[name="gender"]:checked')?.value || "",
+                languages: [
+                    document.getElementById("english").checked ? "English" : "",
+                    document.getElementById("nonEnglish").checked ? "Non-English" : ""
+                ].filter(Boolean).join(", "),
+                about: document.getElementById("about").value
+            };
+        }
+
+        // SETTER FUNCTION
+        function setFormValues(data) {
+            document.getElementById("userId").value = data.userId || "";
+            document.getElementById("password").value = data.password || "";
+            document.getElementById("name").value = data.name || "";
+            document.getElementById("address").value = data.address || "";
+            document.getElementById("country").value = data.country || "";
+            document.getElementById("zipCode").value = data.zipCode || "";
+            document.getElementById("email").value = data.email || "";
+            
+            document.querySelectorAll('input[name="gender"]').forEach(input => {
+                input.checked = input.value === data.gender;
+            });
+
+            document.getElementById("english").checked = data.languages.includes("English");
+            document.getElementById("nonEnglish").checked = data.languages.includes("Non-English");
+            
+            document.getElementById("about").value = data.about || "";
+        }
+
+        // ADDING EVENT LISTENER TO BUTTON
+        document.getElementById("submitBtn").addEventListener("click", function() {
+            let userData = getFormValues();
+
+            // Validation
+            if (!userData.userId || userData.userId.length < 5 || userData.userId.length > 12) {
+                alert("User ID must be 5-12 characters.");
+                return;
+            }
+            if (!userData.password || userData.password.length < 7 || userData.password.length > 12) {
+                alert("Password must be 7-12 characters.");
+                return;
+            }
+            if (!/^[A-Za-z\s]+$/.test(userData.name)) {
+                alert("Name must contain only alphabets.");
+                return;
+            }
+            if (!userData.country) {
+                alert("Please select a country.");
+                return;
+            }
+            if (!/^\d+$/.test(userData.zipCode)) {
+                alert("ZIP Code must contain only numbers.");
+                return;
+            }
+            if (!userData.email.includes("@")) {
+                alert("Please enter a valid email.");
+                return;
+            }
+            if (!userData.gender) {
+                alert("Please select a gender.");
+                return;
+            }
+            if (!userData.languages) {
+                alert("Please select at least one language.");
+                return;
+            }
+
+            // ADD TO TABLE
+            let table = document.getElementById("userTable").querySelector("tbody");
+            let row = table.insertRow();
+            Object.values(userData).forEach(value => {
+                let cell = row.insertCell();
+                cell.innerText = value || "-";
+            });
+
+            alert("Form submitted successfully!");
+
+            // RESET FORM USING SETTER FUNCTION
+            setFormValues({});
+        });
+    </script>
+
+</body>
+</html>

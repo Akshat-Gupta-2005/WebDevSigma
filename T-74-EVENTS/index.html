@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div1">
+        hi
+    </div>
+    <button id="btn">click</button>
+    <script>
+        let button = document.getElementById("btn")
+        button.addEventListener("click",()=>{
+            document.getElementById("div1").innerHTML = "change1"
+        })
+        button.addEventListener("dblclick",()=>{
+            document.getElementById("div1").innerHTML = "change12"
+        })
+    </script>
+</body>
+</html>

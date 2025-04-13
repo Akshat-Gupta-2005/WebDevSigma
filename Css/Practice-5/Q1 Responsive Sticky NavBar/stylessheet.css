@@ -1,0 +1,38 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+ul{
+    list-style: none inside;
+    background-color: red;
+    position: sticky;
+    top: 0px;
+}
+
+li{
+    display: inline-block;
+    padding: 0px 13vw;
+}
+
+div{
+    height: 10000px;
+}
+
+.b1{
+    height: 200px;
+    width: 200px;
+    position: relative;
+    z-index: 2;
+    background-color: green;
+}
+
+.b2{
+    height: 200px;
+    width: 200px;
+    z-index: 1;
+    position: relative;
+    top: -150px;
+    left: 50px;
+    background-color: yellow;
+}

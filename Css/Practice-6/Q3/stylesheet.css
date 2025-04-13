@@ -1,0 +1,30 @@
+.nav{
+    display: flex;
+    height: 50px;
+    background-color: rgb(193, 193, 241);
+    align-items: center;
+    justify-content: space-around;
+}
+
+.but{
+    border: 2px solid grey;
+    padding: 6px 20px;
+}
+
+.con{
+    background-color: rgb(240, 184, 184);
+    display: flex;
+    justify-content: space-between;
+}
+
+.b1{
+    height: 300px;
+    width: 300px;
+    background-color: rgb(169, 215, 169);
+}
+
+.b2{
+    height: 300px;
+    width: 300px;
+    background-color: rgb(241, 241, 195);
+}

@@ -1,0 +1,9 @@
+npx create-react-app foldername
+cd foldername
+npm start 
+npm install --save-dev web-vitals
+the main file to use is app.js in src folder 
+make components folder in src folder if you want to make different components
+use rafce to make components
+
+npm create vite@latest

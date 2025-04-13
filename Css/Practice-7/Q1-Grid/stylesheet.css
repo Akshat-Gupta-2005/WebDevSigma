@@ -1,0 +1,28 @@
+.con{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    /* align-items: center; */
+    justify-content: center;
+    justify-items: center;
+}
+
+.item{
+    height: 100px;
+    width: 100px;
+    background-color: yellow;
+    text-align: center;
+    line-height: 100px;
+    gap: 20px;
+}
+
+.i1{
+    background-color: rgb(232, 162, 162);
+}
+
+.i2{
+    background-color: rgb(163, 162, 232);
+}
+
+.i3{
+    background-color: rgb(162, 232, 174);
+}

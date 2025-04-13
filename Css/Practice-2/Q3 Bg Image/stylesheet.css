@@ -1,0 +1,9 @@
+div{
+    background-image: url(pexels-eberhardgross-443446.jpg);
+    height: 50vh;
+    width: 50vw;
+    background-size: contain;
+    /* background-size: {{10px}}; */
+    /* background-attachment:fixed; */
+    /* background-repeat: no-repeat; */
+}
