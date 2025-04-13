@@ -22,7 +22,8 @@
 
 ## Remote Repositories
 - `git remote add origin <url>` - Connect to remote  
-- `git remote -v` - View remotes  
+- `git remote -v` - View remotes
+- `git remote remove <name>` - Remove a remote
 - `git push -u origin <branch>` - Push branch & set upstream  
 - `git push` - Push commits  
 - `git pull` - Fetch and merge from remote  
