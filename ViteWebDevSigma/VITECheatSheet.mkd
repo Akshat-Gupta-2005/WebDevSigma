@@ -1,0 +1,18 @@
+# VITE
+---
+## Step-1: Start
+
+```
+npm create vite@latest
+```
+---
+## Step-2: Fill Details
+Fill the details in terminal
+
+---
+## Step-3: Run
+```
+cd Project-Name
+npm install
+npm run dev
+```
