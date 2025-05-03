@@ -1,0 +1,48 @@
+universal: *
+type: tag name
+class: .class_name
+id: #id_name
+img: img[href*='abc']
+pseudo class: .class_name:pseudo class
+
+
+
+Properties:
+  font-family
+  font-size
+  font-weight
+  font-style
+  text-align  : left center right justify center
+
+  color
+  background-color
+  opacity: 0 to 1
+  background-image: url
+
+  height
+  width
+  border
+    border-width
+    border-style
+    border-color
+    border-radius
+  padding: top right bottom left 
+    padding-top
+    padding-right
+    padding-bottom
+    padding-left
+  margin: top right bottom left
+    margin-bottom
+    margin-top
+    margin-left
+    margin-right
+  min-width
+  max-width
+  min-height
+  max-height
+    
+  overflow
+  position
+  visibility
+
+
