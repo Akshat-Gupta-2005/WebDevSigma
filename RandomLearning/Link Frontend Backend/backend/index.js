@@ -19,7 +19,7 @@ app.get("/getData", (req, res) => {
     res.send("Hello");
 });
 
-app.listen(5000, () => console.log("app is running"));
+app.listen(3001, () => console.log("app is running"));
 
 
 
